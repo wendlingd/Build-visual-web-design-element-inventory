@@ -8,10 +8,10 @@ For example, if you want a screenshot of every form on your site, you can use a 
 
 ## Example workflow:
 
-1. Run spider to locate tag of interest, for example collect URLs with the <form> tag on the page.
-2. Feed the list of URLs to this script. Example of script capability-xpath can be set to form but 'not contains' to avoid site search box, which appears on most pages).
-3. Import images into photo management program.
-4. Crop images to your target design element
+1. Run spider to locate tag of interest, for example collect every URLs where the form tag is found.
+2. Feed the list of URLs to this py script. Example of script capability-xpath can locate form but use 'not contains' to avoid capturing your site search box, which probably appears on most pages).
+3. Import images into a photo management program.
+4. Crop images to your target design element.
 5. In Apple Photos I use AppleScript to automatically right the file name to the title, meaning the URL appears under the image.
 5. Drag images into categories. In forms example, might be, forms to sign up for email updates, forms for database searches, forms for customer service requests, forms for evaluating services or events, license agreements, etc.
 6. Output photo montages that you can use to set standards and level your design across the site, and plan your work.
