@@ -16,13 +16,15 @@ xpath examples:
     //button
 '''
 
+import pandas as pd
+import os
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 import os
 # from selenium.webdriver.chrome.options import Options
 
 # Set working directory
-os.chdir('/Users/user/Projects/DesignSystem/UrlScreenshotGrabber')
+os.chdir('/Users/DesignSystem/UrlScreenshotGrabber')
 
 # Name of the URL list to process
 sourceListFile = "siteFormUrls.txt"
