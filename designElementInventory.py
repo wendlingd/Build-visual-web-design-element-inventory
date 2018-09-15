@@ -1,6 +1,6 @@
-# ========================================
-# 7. Get screenshot for every URL in file
-# ========================================
+# =======================================
+# Get screenshot for every URL in a file
+# =======================================
 '''
 Required before running: Text file with one URL per line. I use a spider to 
 find elements on pages and traffic / site area to guide what subset of site 
@@ -11,7 +11,7 @@ What types of page elements you can target: https://selenium-python.readthedocs.
 xpath examples:
     /html/body/footer
     //form[@id='loginForm']
-    //form[not(contains(@action, 'dont-want'))]
+    //form[not(contains(@action, 'actionIdont-want'))] # for example site search box that is on every page
     //form[(contains(@action, 'do-want'))]")
     //button
 '''
