@@ -21,7 +21,7 @@ For example, if you want a screenshot of every form on your site, you can use a 
 
 ## More info
 
-* Put _design system_ into your favorite search engine.
+* Put _design system_ into your favorite search engine or try http://atomicdesign.bradfrost.com/chapter-1/.
 
 
 ## Requirements
