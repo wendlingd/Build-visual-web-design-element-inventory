@@ -1,7 +1,7 @@
 # Build-visual-web-design-inventory
 > **Use Python / Selenium to collect screenshots of your site's design elements**
 
-Use this code if you want to get a visual inventory of a large web site that has many different types of designs/presentations - such as if it was merged from many sources, or was built by different designers over time. You can use this result when creating a web design system.
+Use this code if you want to get a visual inventory of a large web site that has many different types of designs/presentations - such as if it was merged from many sources, or was built by different designers over time. You can use this result when you are standardizing to a web design system.
 
 For example, if you want a screenshot of every form on your site, you can use a spidering tool to get the list of URLs where the <form> tag is present, and feed the list to this script and automatically generate a folder of the screenshots.
 
