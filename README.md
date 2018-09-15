@@ -3,7 +3,9 @@
 
 Use this code if you want to get a visual inventory of a large web site that has many different types of designs/presentations - such as if it was merged from many sources, or was built by different designers over time. You can use this result when you are standardizing to a web design system.
 
-For example, if you want a screenshot of every form on your site, you can use a spidering tool to get the list of URLs where the <form> tag is present, and feed the list to this script and automatically generate a folder of the screenshots.
+The script automatically opens a URL, scrolls to the item you want, writes a screenshot, then goes on to the next URL.
+
+For example, if you want a screenshot of every form on your site, you can use a spidering tool to get the list of URLs where the <form> tag is present, and feed the list to this script, which will automatically generate a folder of the screenshots.
 
 
 ## Example workflow:
