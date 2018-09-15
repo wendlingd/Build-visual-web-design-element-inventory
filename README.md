@@ -17,6 +17,11 @@ For example, if you want a screenshot of every form on your site, you can use a 
 6. Output photo montages that you can use to set standards and level your design across the site, and plan your work.
 
 
+## More info
+
+* Put _design system_ into your favorite search engine.
+
+
 ## Requirements
 
 * Python
