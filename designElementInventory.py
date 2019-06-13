@@ -2,11 +2,22 @@
 # Get screenshot for every URL in a file
 # =======================================
 '''
-Required before running: Text file with one URL per line. I use a spider to 
-find elements on pages and traffic / site area to guide what subset of site 
-URLs to visit.
+Last modified: 2019-06-13
 
-Source URLs need to start with https or http.
+This script: Turns text file with one URL per line, into screenshots of the
+top of each page. 
+
+----------------
+NOTES
+----------------
+Stuff you need to do / opportunities for script improvement
+
+- URLs need to start with https:// or http://
+- Does not capture pages that are behind authentication.
+- Script can be run all at once, but check your file names/locations.
+- Serving suggestion: Import into Apple photos and turn slide show 
+  into video, with site rank-page name visible on top of screenshot.
+  
 What types of page elements you can target: https://selenium-python.readthedocs.io/locating-elements.html
 
 xpath examples:
