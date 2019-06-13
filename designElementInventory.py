@@ -15,9 +15,13 @@ Stuff you need to do / opportunities for script improvement
 - URLs need to start with https:// or http://
 - Does not capture pages that are behind authentication.
 - Script can be run all at once, but check your file names/locations.
-- Serving suggestion: Import into Apple photos and make filename the Title, 
-  so you know what the URLs are when browsing. I create a video of the slideshow.
-  Future: Would be awesome to put site rank-page name on top of each screenshot.
+- Serving suggestion: Import into Apple Photos and turn slide show 
+  into a video, with site rank-page name visible on top of screenshot.
+  I used this to move file names into Title in Apple Photos;
+  https://discussions.apple.com/docs/DOC-8414. 
+  - Alternative to Apple Photos: Perhaps Python and PIL (Python Imaging Library) 
+  would be a way to write URLs directly onto the images, but you would
+  probably need both background and foreground, so it would appear reliably.
   
 What types of page elements you can target: https://selenium-python.readthedocs.io/locating-elements.html
 
@@ -49,7 +53,7 @@ def save_screenshots(sourceList):
         driver = webdriver.Firefox( options=options )
         # driver = webdriver.Chrome('/Users/name/anaconda3/bin/chromedriver')
         driver.get(url)
-        element = driver.find_element_by_xpath("//form")
+        element = driver.find_element_by_xpath("//form") # comment this and next out, if you just want top of page
         element.location_once_scrolled_into_view
         fname = url.replace("https://www.mysite.org/", "")
         fname = fname.replace("/", "-")
