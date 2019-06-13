@@ -33,7 +33,7 @@ def save_screenshots(sourceList):
     for index, url in enumerate(sourceList):
         options = Options()
         options.add_argument( "--headless" )
-        driver = webdriver.Firefox( firefox_options=options )
+        driver = webdriver.Firefox( options=options )
         # driver = webdriver.Chrome('/Users/name/anaconda3/bin/chromedriver')
         driver.get(url)
         element = driver.find_element_by_xpath("//form")
