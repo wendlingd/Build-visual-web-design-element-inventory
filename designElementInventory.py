@@ -15,8 +15,9 @@ Stuff you need to do / opportunities for script improvement
 - URLs need to start with https:// or http://
 - Does not capture pages that are behind authentication.
 - Script can be run all at once, but check your file names/locations.
-- Serving suggestion: Import into Apple photos and turn slide show 
-  into video, with site rank-page name visible on top of screenshot.
+- Serving suggestion: Import into Apple photos and make filename the Title, 
+  so you know what the URLs are when browsing. I create a video of the slideshow.
+  Future: Would be awesome to put site rank-page name on top of each screenshot.
   
 What types of page elements you can target: https://selenium-python.readthedocs.io/locating-elements.html
 
