@@ -6,6 +6,7 @@ Required before running: Text file with one URL per line. I use a spider to
 find elements on pages and traffic / site area to guide what subset of site 
 URLs to visit.
 
+Source URLs need to start with https or http.
 What types of page elements you can target: https://selenium-python.readthedocs.io/locating-elements.html
 
 xpath examples:
