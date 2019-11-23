@@ -2,14 +2,10 @@
 # Get screenshot for every URL in a file
 # =======================================
 '''
-Last modified: 2019-06-13
+Last modified: 2019-11-22
 
-This script: Turns text file with one URL per line, into screenshots of the
-top of each page. 
+This script: Turns text file with one URL per line, into screenshots of the top of each page. 
 
-----------------
-NOTES
-----------------
 Stuff you need to do / opportunities for script improvement
 
 - URLs need to start with https:// or http://
@@ -25,41 +21,48 @@ Stuff you need to do / opportunities for script improvement
   
 What types of page elements you can target: https://selenium-python.readthedocs.io/locating-elements.html
 
-xpath examples:
+xpath examples (commented out in the demo code):
     /html/body/footer
     //form[@id='loginForm']
     //form[not(contains(@action, 'actionIdont-want'))] # for example site search box that is on every page
     //form[(contains(@action, 'do-want'))]")
     //button
+
+Getting going with Selenium for Python:
+    - https://selenium-python.readthedocs.io
+    - https://github.com/mozilla/geckodriver (multiple drivers to choose from)
+    - https://selenium.dev/selenium/docs/api/py/
+    - User group, https://groups.google.com/forum/#!forum/selenium-users
 '''
 
 import pandas as pd
 import os
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
-import os
-# from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options # Other drivers such as chromedriver are available
+# driver = webdriver.Firefox(executable_path = '/anaconda3/bin/geckodriver')
 
-# Set working directory
-os.chdir('/Users/DesignSystem/UrlScreenshotGrabber')
+# Update to match your system
+os.chdir('/Users/name/DesignSystem')
+dataRaw = 'data/raw/' # source data
+reports = 'reports/Top150/' # where to put the results
 
-# Name of the URL list to process
-sourceListFile = "siteFormUrls.txt"
+sourceListFile = dataRaw + "Top150.txt"
 
 def save_screenshots(sourceList):
     for index, url in enumerate(sourceList):
         options = Options()
-        options.add_argument( "--headless" )
         driver = webdriver.Firefox( options=options )
-        # driver = webdriver.Chrome('/Users/name/anaconda3/bin/chromedriver')
+        options.headless = True
+        # options.add_argument( "--headless" )
         driver.get(url)
-        element = driver.find_element_by_xpath("//form") # comment this and next out, if you just want top of page
-        element.location_once_scrolled_into_view
-        fname = url.replace("https://www.mysite.org/", "")
+        # element = driver.find_element_by_xpath("//form") # comment this and next out, if you just want top of page
+        # element.location_once_scrolled_into_view
+        fname = url.replace("https://", "")
         fname = fname.replace("/", "-")
         fname = fname.replace(".", "-")
         fname = fname.replace("\n", "")
-        driver.save_screenshot(fname + "-{}.png".format(index)) # Number protects because multiple elements may appear on one page
+        fname = fname.replace("--", "-")
+        driver.save_screenshot(reports + fname + "-{}.png".format(index)) # Number protects because multiple elements may appear on one page
         driver.quit()
  
 sourceList = open(sourceListFile, "r")
