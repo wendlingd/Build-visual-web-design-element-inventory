@@ -53,8 +53,7 @@ def save_screenshots(sourceList):
     for index, url in enumerate(sourceList):
         options = Options()
         driver = webdriver.Firefox( options=options )
-        options.headless = True
-        # options.add_argument( "--headless" )
+        options.headless = True # some versions, options.add_argument( "--headless" )
         driver.get(url)
         # element = driver.find_element_by_xpath("//form") # comment this and next out, if you just want top of page
         # element.location_once_scrolled_into_view
