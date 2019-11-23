@@ -2,13 +2,14 @@
 # Get screenshot for every URL in a file
 # =======================================
 '''
-Last modified: 2019-11-22
+Last modified: 2019-11-23
 
 This script: Turns text file with one URL per line, into screenshots of the top of each page. 
 
 Stuff you need to do / opportunities for script improvement
 
-- URLs need to start with https:// or http://
+- I sort my list of URLs by highest traffic first; position is passed through to the png name.
+- URLs need to start with https:// or http://.
 - Does not capture pages that are behind authentication.
 - Script can be run all at once, but check your file names/locations.
 - Serving suggestion: Import into Apple Photos and turn slide show 
@@ -61,8 +62,8 @@ def save_screenshots(sourceList):
         fname = fname.replace("/", "-")
         fname = fname.replace(".", "-")
         fname = fname.replace("\n", "")
-        fname = fname.replace("--", "-")
-        driver.save_screenshot(reports + fname + "-{}.png".format(index)) # Number protects because multiple elements may appear on one page
+        i = "{:03}".format(index) # Put order into filename to match back to list or sort in photo m'ment app; assumes 999 or less
+        driver.save_screenshot(reports + i + '-' + fname + '.png') # Number protects because multiple elements may appear on one page
         driver.quit()
  
 sourceList = open(sourceListFile, "r")
