@@ -33,3 +33,16 @@ An alternative use could be to extract from your traffic tool, your top 150 page
 
 * Python
 * Selenium webdriver
+
+
+## Anaconda users / Mac
+
+My experience with a new webdriver install for Aanaconda - Mac in Fall 2019 took a lot longer than I wanted it to. The correct instructions were spread out in multiple places, so here's a boost if your configuration is like mine. I decided to use the Firefox geckodriver, but there are several choices. I will demonstrate with geckodriver; change as needed.
+
+1. See https://anaconda.org/conda-forge/selenium, conda install -c conda-forge selenium
+2. Get driver. Start at https://selenium-python.readthedocs.io/installation.html. Go to the page where it's available, and download.
+3. Uncompress driver in Downloads
+4. Terminal: cp /Downloads /anaconda3/bin (copy from downloads to your anaconda install)
+5. Terminal: sudo nano /etc/paths - add path to /anaconda3/bin
+6. Terminal: echo $PATH - to make sure the new entry appears
+7. Exit Terminal, try running the script.
