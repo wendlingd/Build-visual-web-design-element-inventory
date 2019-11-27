@@ -61,6 +61,7 @@ def save_screenshots(sourceList):
         fname = fname.replace("/", "-")
         fname = fname.replace(".", "-")
         fname = fname.replace("\n", "")
+        index = index + 1 # most people aren't used to base zero
         i = "{:03}".format(index) # Put order into filename to match back to list or sort in photo m'ment app; assumes 999 or less
         driver.save_screenshot(reports + i + '-' + fname + '.png') # Number protects because multiple elements may appear on one page
         driver.quit()
