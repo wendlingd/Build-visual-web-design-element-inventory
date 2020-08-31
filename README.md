@@ -43,7 +43,7 @@ My experience with a new webdriver install for Anaconda - Mac in Fall 2019 took 
 1. See https://anaconda.org/conda-forge/selenium, conda install -c conda-forge selenium
 2. Get driver. Start at https://selenium-python.readthedocs.io/installation.html. Go to the page where it's available, and download.
 3. Uncompress driver in Downloads
-4. Terminal: cp /Downloads /anaconda3/bin (copy from downloads to your anaconda install)
+4. Terminal: cp /Downloads/filename opt/anaconda3/bin (copy from downloads to your anaconda install; here OS 10.15 Catalina)
 5. Terminal: sudo nano /etc/paths - add path to /anaconda3/bin
 6. Terminal: echo $PATH - to make sure the new entry appears
 7. Exit Terminal, try running the script.
